@@ -120,3 +120,4 @@ void dividieren(){
 
     printf("Der Quotient der Zahlen ist: %d\n", summe);
 }
+}
