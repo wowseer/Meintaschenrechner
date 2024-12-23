@@ -34,7 +34,7 @@ int zahlenEingabe(int *anzahl, int *zahlen){
     int *eingabe;
     // zahlen = (int*)malloc(sizeof(int));
 
-    printf("Bitte gib die Anzahl der Zahlen ein die du eingeben möchtest, mit -1 Kommst du zurück.\n");
+    printf("Bitte gib die Anzahl der Zahlen ein die du eingeben möchtest. \n");
     scanf("%d",anzahl);
    // (int*)realloc(zahlen, (*anzahl)*sizeof(int));
     zahlen = (int*)realloc(zahlen, *anzahl * sizeof(int)); // Speicher anpassen
