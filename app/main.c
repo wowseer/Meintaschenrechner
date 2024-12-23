@@ -14,6 +14,9 @@ int main () {
             dividieren();
         }else{
             printf("Falsche Eingabe\n");
+            printf("Bitte wähle eine der Optionen 1, 2, 3 oder 4\n");
+            printf("\n\n");
+            main();
     }
     return 0;
 }
