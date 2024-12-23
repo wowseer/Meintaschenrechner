@@ -111,8 +111,12 @@ void dividieren(){
     //     printf("%d\n", zahlen[i]);
     // }
     for(int i = 0; i < anzahl; i++){
-        summe /= zahlen[i];
-    }
+        if (i == 0) {
+            summe = zahlen[i]; // Erste Zahl zuweisen
+        } else {
+            summe /= zahlen[i]; // Restliche Zahlen abziehen
+        }
+
 
     printf("Der Quotient der Zahlen ist: %d\n", summe);
 }
