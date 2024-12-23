@@ -2,16 +2,18 @@
 
 int main () {
 
-    if(menu() == 1){
-        addieren();
-    }else if(menu() == 2){
-        subtrahieren();
-    }else if(menu() == 3){
-        multiplizieren();
-    }else if(menu() == 4){
-        dividieren();
-    }else{
-        printf("Falsche Eingabe\n");
+    int selection = menu();
+
+        if(selection == 1){
+            addieren();
+        }else if(selection == 2){
+            subtrahieren();
+        }else if(selection == 3){
+            multiplizieren();
+        }else if(selection == 4){
+            dividieren();
+        }else{
+            printf("Falsche Eingabe\n");
     }
     return 0;
 }
