@@ -1,23 +1,35 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
 
 int main () {
 
     int selection = menu();
+  do {
+        selection = menu();
 
-        if(selection == 1){
-            addieren();
-        }else if(selection == 2){
-            subtrahieren();
-        }else if(selection == 3){
-            multiplizieren();
-        }else if(selection == 4){
-            dividieren();
-        }else{
-            printf("Falsche Eingabe\n");
-            printf("Bitte wähle eine der Optionen 1, 2, 3 oder 4\n");
-            printf("\n\n");
-            main();
-    }
+        switch (selection) {
+            case 1:
+                addieren();
+                break;
+            case 2:
+                subtrahieren();
+                break;
+            case 3:
+                multiplizieren();
+                break;
+            case 4:
+                dividieren();
+                break;
+            case 0: // Option zum Beenden hinzugefügt
+                printf("Programm beendet.\n");
+                break;
+            default:
+                printf("Falsche Eingabe\n");
+                printf("Bitte wähle eine der Optionen 1, 2, 3, 4 oder 0 zum Beenden\n");
+                printf("\n\n");
+        }
+    } while (selection != 0); // Schleife läuft, bis der Benutzer 0 wählt
     return 0;
 }
 
