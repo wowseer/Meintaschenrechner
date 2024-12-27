@@ -37,7 +37,7 @@ int menu(){
     int selection;
 
     printf("Hallo ich bin dein Persönlicher Taschenrechner\n");
-    printf("Bitte Gib an ob du Addieren(1), Subtrahieren(2), Multiplizieren(3) oder Dividieren(4) oder (0) bennden möchtest.\n");
+    printf("Bitte Gib an ob du Addieren(1), Subtrahieren(2), Multiplizieren(3), Dividieren(4) oder (0)bennden möchtest.\n");
     printf("\n\n");
     scanf("%d", &selection);
 
