@@ -111,18 +111,23 @@ void dividieren(){
     int *zahlen =(int*)malloc(sizeof(int));
     zahlenEingabe(&anzahl, zahlen);
 
-    int summe = 1;
     // for(int i = 0; i < anzahl; i++){
     //     printf("%d\n", zahlen[i]);
-    // }
-    for(int i = 0; i < anzahl; i++){
-        if (i == 0) {
-            summe = zahlen[i]; // Erste Zahl zuweisen
-        } else {
-            summe /= zahlen[i]; // Restliche Zahlen abziehen
+    //
+    if (anzahl > 0) {
+        double quotient = zahlen[0]; // Erste Zahl zuweisen, double für genauere Ergebnisse
+        for (int i = 1; i < anzahl; i++) {
+            if (zahlen[i] == 0) { // Division durch Null abfangen
+                fprintf(stderr, "Fehler: Division durch Null!\n");
+                free(zahlen); // Speicher freigeben
+                return;
+            }
+            quotient /= zahlen[i];
         }
+        printf("Der Quotient der Zahlen ist: %f\n", quotient);
+    } else {
+        printf("Keine Zahlen eingegeben.\n");
+    }
 
+}
 
-    printf("Der Quotient der Zahlen ist: %d\n", summe);
-}
-}
